@@ -1,0 +1,22 @@
+# Calculates if 100 seats have been booked
+
+remSeats = 100
+
+print("Seats remaining:", remSeats, end='. ')
+numSeats = int(input("How many in your group? "))
+if numSeats > remSeats:
+    print("Sorry, not enough seats left")
+    print("Seats remaining:", remSeats, end='. ')
+    numSeats = int(input("How many in your group? "))
+remSeats -= numSeats
+
+while remSeats > 0:
+        print("Booked, thank you.")
+        print("Seats remaining:", remSeats, end='. ')
+        numSeats = int(input("How many in your group? "))
+        if numSeats > remSeats:
+            print("Sorry, not enough seats left")
+            print("Seats remaining:", remSeats, end='. ')
+            numSeats = int(input("How many in your group? "))
+        remSeats -= numSeats
+print("SOLD OUT")
